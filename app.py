@@ -7,8 +7,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    greeding = "Hello World"
-    return greeding
+    greet_message = "Hello World"
+    return greet_message
 
 @app.route('/form')
 def form():
