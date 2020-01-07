@@ -14,14 +14,14 @@ def hello():
 def form():
     return render_template('form.html')
 
-@app.route('/confirm', methods = ['POST', 'GET'])
-def confirm():
+@app.route('/decided', methods = ['POST', 'GET'])
+def decided():
    if request.method == 'POST':
         dates = request.form['h']
         data = datetime.datetime(dates)
 
         homeUrl = '/form'
-        return render_template("confirm.html", data=data, homeUrl=homeUrl)
+        return render_template("decided.html", data=data, homeUrl=homeUrl)
 
 if __name__ == "__main__":
     app.run(port=8000, debug=True)
