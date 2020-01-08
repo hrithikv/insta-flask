@@ -6,7 +6,7 @@ from flask import Flask, render_template, request
 flaskapp = Flask(__name__)
 
 @flaskapp.route('/')
-def hello():
+def welcome():
     greet_message = "Hello World"
     return greet_message
 
